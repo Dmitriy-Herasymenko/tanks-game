@@ -1,12 +1,16 @@
-import World from "./src/world";
-import View from "./src/view";
-import Game from "./src/game";
-import levels from "./data/levels";
+import World from "./src/world.js";
+import View from "./src/view.js";
+import Game from "./src/game.js";
+import levels from "./data/levels.js";
 
 const canvas = document.querySelector("canvas");
 
-new Game({
+const game = new Game({
     world: new World(),
     view: new View(canvas),
     levels
 });
+
+//game.start();
+
+console.log("game", game)
